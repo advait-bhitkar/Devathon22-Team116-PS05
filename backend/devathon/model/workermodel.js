@@ -39,7 +39,6 @@ const schema=new mongoose.Schema(
         },
         specification:{
             type: String,
-            enum:["lights","fan","bathroom","room"],
         },
         gender:{
             type: String,

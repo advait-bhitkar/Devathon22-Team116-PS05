@@ -13,21 +13,21 @@ let schema=new mongoose.Schema(
         },
         gender:{
             type:String,
-            enum:["female","male","other"],
+            enum:["Female","Male","Other"],
         },
         email: {
             type: String,
             unique: true,
             required: true,
-            validate: {
-                validator: function (v) {
-                    let index=v.search(/nitw.ac.in/);
-                    if(index<0){
-                        throw new Error("Email is invalid!");
-                    } 
-                },
-                msg: "Email is invalid!",
-            },
+            // validate: {
+            //     validator: function (v) {
+            //         let index=v.search(/nitw.ac.in/);
+            //         if(index<0){
+            //             throw new Error("Email is invalid!");
+            //         } 
+            //     },
+            //     msg: "Email is invalid!",
+            // },
         },
         regno: {
             type:Number,
