@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acitivity.StudentRegisterActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorOnPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student "
+        android:textSize="40sp"
+        android:textColor="?attr/colorOnSecondary"
+        android:fontFamily="@font/open_sans"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/text_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Student Registration"
+        android:textSize="16sp"
+        android:textColor="?attr/colorOnSecondary"
+        android:fontFamily="@font/open_sans"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_username"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_create_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_edittext"
+            android:fontFamily="@font/open_sans"
+            android:hint="College Email"
+            android:textColor="@color/color_text_light"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:textColorHint="@color/color_text_light"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_email"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/text_registration_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_edittext"
+            android:fontFamily="@font/open_sans"
+            android:hint="Registration Number"
+            android:textColor="@color/color_text_light"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:textColorHint="@color/color_text_light"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_password"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:passwordToggleEnabled="true"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/text_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_edittext"
+            android:fontFamily="@font/open_sans"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/color_text_light"
+            android:textColorHint="@color/color_text_light"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_email" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create_account"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:text="Create New Account"
+        android:fontFamily="@font/open_sans"
+        android:textSize="18sp"
+        app:cornerRadius="8dp"
+        android:textAllCaps="false"
+
+        app:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:paddingEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:paddingStart="16dp"
+        app:iconPadding="-12dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create_account"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:fontFamily="@font/open_sans"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSecondary"
+            />
+
+        <TextView
+            android:id="@+id/text_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log In"
+            android:fontFamily="@font/open_sans"
+            android:textSize="16sp"
+            android:textColor="?attr/colorPrimary"
+            android:layout_marginStart="8dp"
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

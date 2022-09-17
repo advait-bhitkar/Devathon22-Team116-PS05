@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/studentHomeFragment">
+    <fragment
+        android:id="@+id/studentAccountFragment"
+        android:name="com.silverstudio.hostelissuesolver.fragments.StudentAccountFragment"
+        android:label="fragment_student_account"
+        tools:layout="@layout/fragment_student_account" />
+    <fragment
+        android:id="@+id/studentHomeFragment"
+        android:name="com.silverstudio.hostelissuesolver.fragments.StudentHomeFragment"
+        android:label="fragment_student_home"
+        tools:layout="@layout/fragment_student_home" >
+        <action
+            android:id="@+id/action_studentHomeFragment_to_reportNewIssueFragment"
+            app:destination="@id/reportNewIssueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentIssuesFragment"
+        android:name="com.silverstudio.hostelissuesolver.fragments.StudentIssuesFragment"
+        android:label="fragment_student_issues"
+        tools:layout="@layout/fragment_student_issues" />
+    <fragment
+        android:id="@+id/reportNewIssueFragment"
+        android:name="com.silverstudio.hostelissuesolver.fragments.ReportNewIssueFragment"
+        android:label="fragment_report_new_issue"
+        tools:layout="@layout/fragment_report_new_issue" >
+        <action
+            android:id="@+id/action_reportNewIssueFragment_to_studentHomeFragment"
+            app:destination="@id/studentHomeFragment" />
+    </fragment>
+</navigation>

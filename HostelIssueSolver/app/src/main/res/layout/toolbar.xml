@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar android:id="@+id/topAppBar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/backgroundColor"
+    app:navigationIconTint="?attr/colorOnSecondary"
+    app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+    android:elevation="0dp"
+    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />
+

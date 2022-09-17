@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.StudentAccountFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:minHeight="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@android:color/white"
+                android:background="?attr/colorOnPrimary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Your Account Info"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <TextView
+                android:id="@+id/text_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="Student Details"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_username"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/editBtnName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_create_account">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:text="ffff"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editBtnName"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_username"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_email"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/editBtnName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_username">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Branch"
+                    android:inputType="text"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editBtnbranch"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_email"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_year"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/editBtnYear"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_email">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/text_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Year"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editBtnYear"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_year"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_mobile"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/editBtnYear"
+
+                app:layout_constraintTop_toBottomOf="@+id/layout_year">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/text_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Mobile Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editMobileNumber"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_mobile"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_gender"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:focusable="false"
+                android:fontFamily="@font/open_sans"
+                android:hint="Gender"
+                android:paddingTop="0dp"
+                android:text=" Gender"
+                app:boxStrokeColor="#d8d6de"
+                app:hintTextColor="#6e6b7b"
+
+
+                app:layout_constraintEnd_toStartOf="@+id/editGender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_mobile">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:focusable="false"
+                    android:fontFamily="@font/open_sans"
+                    android:inputType="none"
+                    android:paddingStart="16dp"
+
+
+
+                    android:textColor="#6e6b7b"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editGender"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_gender"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_hostel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:focusable="false"
+                android:fontFamily="@font/open_sans"
+                android:hint="Hostel"
+                android:paddingTop="0dp"
+                android:text=" Hostel"
+                app:boxStrokeColor="#d8d6de"
+                app:hintTextColor="#6e6b7b"
+
+
+                app:layout_constraintEnd_toStartOf="@+id/editHostel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_gender">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/hostel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:focusable="false"
+                    android:fontFamily="@font/open_sans"
+                    android:inputType="none"
+                    android:paddingStart="16dp"
+
+
+                    android:textColor="#6e6b7b"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editHostel"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_hostel"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/room_no"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/editRoom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_hostel">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/text_room_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Room Number"
+                    android:inputType="number"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:maxLength="5"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/editRoom"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editRoom"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/room_no"
+                />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_floor"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/editFloor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/room_no">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/text_floor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Floor"
+                    android:inputType="number"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editFloor"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_floor"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_block"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/editBlock"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_floor">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/text_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_edittext"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Block"
+                    android:inputType="number"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/color_text_light"
+                    android:textColorHint="@color/color_text_light"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editBlock"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/background_edittext"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_block"
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continue"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/open_sans"
+
+                android:paddingStart="16dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="0dp"
+                android:text="Save Details"
+                android:textAllCaps="false"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="18sp"
+                app:backgroundTint="?attr/colorPrimary"
+                app:cornerRadius="8dp"
+                app:iconPadding="-12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_block" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

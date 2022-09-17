@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.silverstudio.hostelissuesolver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HostelIssueSolver"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".acitivity.StudentMainActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".acitivity.StudentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitivity.WorkerLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitivity.StudentLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitivity.WorkerRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".acitivity.StudentRegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".acitivity.UserTypeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.HostelIssueSolver.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
