@@ -108,7 +108,6 @@ class StudentAccountFragment : Fragment() {
         val floorT = sharedPref.getString("floor", "");
         val blockT = sharedPref.getString("block", "");
 
-        Toast.makeText(requireActivity(), fullNameT, Toast.LENGTH_SHORT).show()
         fullName.setText(fullNameT)
         branch.setText(branchT)
         year.setText(yearT)

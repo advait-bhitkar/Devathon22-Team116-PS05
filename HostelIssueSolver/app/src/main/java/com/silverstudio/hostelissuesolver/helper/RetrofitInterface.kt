@@ -3,6 +3,7 @@ package com.silverstudio.hostelissuesolver.helper
 import com.silverstudio.hostelissuesolver.fragments.ReportNewIssueFragment
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
 
@@ -24,5 +25,11 @@ interface RetrofitInterface {
     @Headers("Content-Type: application/json")
     @POST("postissue")
     fun issueReport(@Body issueReportData: IssueReportData) : Call<IssueReportResult>
+
+
+    @Headers("Content-Type: application/json")
+    @GET("getissue")
+    fun allIssueReport() : Call<List<allIssueReportResult>>
+
 
 }

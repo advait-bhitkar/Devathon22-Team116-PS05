@@ -32,6 +32,7 @@ class UserTypeActivity : AppCompatActivity() {
 
             val intent = Intent(this,StudentMainActivity::class.java)
             startActivity(intent)
+            finish()
 
         }
 
@@ -39,6 +40,7 @@ class UserTypeActivity : AppCompatActivity() {
         {
             val intent = Intent(this,StudentDetailsActivity::class.java)
             startActivity(intent)
+            finish()
 
         }
 

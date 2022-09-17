@@ -35,7 +35,7 @@
         <activity
             android:name=".acitivity.UserTypeActivity"
             android:exported="true"
-            android:label="@string/title_activity_main2"
+            android:label="Hostel Issue Resolver"
             android:theme="@style/Theme.HostelIssueSolver.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
